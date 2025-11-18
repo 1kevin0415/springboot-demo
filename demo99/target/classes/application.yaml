@@ -1,0 +1,31 @@
+server:
+  port: 18080
+
+
+# 配置OpenAI
+spring:
+  ai:
+    openai:
+      api-key: sk-d1022725fada4052825318244e6ca73b
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 0.8
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aihis?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+logging:
+  level:
+    root: debug
+    org.springframework.ai.chat.client: error
+    com.neusoft.neu23.mapper: debug
+mybatis-plus:
+  type-aliases-package: com.neusoft.neu23.entity
+  mapper-locations: classpath*:mapper/*.xml
+
