@@ -19,10 +19,18 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+        group-id: demo-group
+        auto-offset-reset: latest
+    producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 logging:
   level:
-    root: debug
+    root: info
     org.springframework.ai.chat.client: error
     com.neusoft.neu23.mapper: debug
 mybatis-plus:

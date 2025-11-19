@@ -1,0 +1,25 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: my-jenkins
+    user: root # 必须使用 root，否则无法在容器内使用 Docker 命令
+    ports:
+      - "8088:8080"   # 浏览器访问端口
+      - "50000:50000" # 代理端口
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      # 1. 挂载 Docker 守护进程，让 Jenkins 能指挥宿主机的 Docker
+      - /var/run/docker.sock:/var/run/docker.sock
+      # 2. 关键：把你的项目根目录挂载到 Jenkins 的 workspace 目录下
+      # "../" 代表 docker-env 的上一级，也就是 MySpringAI 目录
+      - ../:/var/jenkins_home/workspace/my-local-project
+    networks:
+      - my-net
+
+volumes:
+  jenkins_home:
+
+networks:
+  my-net:
+    external: true # 使用之前 Kafka 创建好的网络
