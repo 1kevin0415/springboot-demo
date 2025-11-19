@@ -1,0 +1,10 @@
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/Demo99App.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/cfg/AiConfig.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/controller/Demo99Controller.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/controller/DemoController.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/entity/Guest.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/mapper/GuestMapper.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/service/GuestService.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/service/impl/GuestSeriveImpl.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/tc/DateTimeTools.java
+/var/jenkins_home/workspace/my-local-project/demo99/src/main/java/com/neusoft/neu23/tc/GuestTools.java
